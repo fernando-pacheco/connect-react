@@ -1,10 +1,35 @@
 import { Button } from "@/components/button"
+import { IconButton } from "@/components/icon-button"
+import { InputContainer, InputField, InputIcon } from "@/components/input"
+import { ArrowRight, Copy, Mail } from "lucide-react"
 
 export default function Home() {
     return (
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-            <Button />
-        </h1>
+        <div>
+            <Button>
+                Enviar
+                <ArrowRight />
+            </Button>
+
+            <IconButton>
+                <Copy />
+            </IconButton>
+
+            <div className="flex gap-20">
+                <InputContainer>
+                    <InputIcon>
+                        <Mail className="size-5" />
+                    </InputIcon>
+                    <InputField placeholder="Digite seu email" />
+                </InputContainer>
+
+                <InputContainer error>
+                    <InputIcon>
+                        <Mail className="size-5" />
+                    </InputIcon>
+                    <InputField placeholder="Digite seu email" />
+                </InputContainer>
+            </div>
+        </div>
     )
 }
