@@ -6,6 +6,8 @@ import { Ranking } from "./components/ranking"
 import { Stats } from "./components/stats"
 
 function InvitePage() {
+    const inviteLink = "http://localhost:3000/fGWdfqer412fW"
+
     return (
         <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
             <div className="flex flex-col gap-10 w-full max-w-[550px]">
@@ -33,7 +35,7 @@ function InvitePage() {
                         </p>
                     </div>
                 </div>
-                <InviteLinkInput />
+                <InviteLinkInput inviteLink={inviteLink} />
                 <Stats />
             </div>
             <Ranking />
